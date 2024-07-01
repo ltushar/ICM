@@ -1,0 +1,52 @@
+### Get API for report incident
+GET http://localhost:4004/browse/Insentive
+
+### Post API for report incident
+POST http://localhost:4004/browse/Insentive
+Content-Type: application/json
+
+{
+    "ID":1,
+    "schemeid": "ISC1",
+    "schemename": "INCENTIVE SCHEME NO 1",
+    "skuid": "",
+    "regioncode": "W001",
+    "empcode":"",
+    "minsales": "75000",
+    "percentile": "11"
+   
+}
+
+### 
+POST http://localhost:36059/browse1/calculatedata
+Content-Type: application/json
+ 
+{
+"schemeid": "ISC1",
+"schemename":"INCENTIVE SCHEME NO 1",
+"skuid":"",
+"regioncode":"W001",
+"empcode":"",
+"minsales":75000,
+"percentile":11,
+"from_date":"2024-06-21",
+"to_date":"2024-06-28"
+}
+
+
+### 
+POST http://localhost:4004/browse/InsentiveRanFor
+Content-Type: application/json
+ 
+{
+"icid":1,
+"schemeid": "ISC1",
+"schemename":"INCENTIVE SCHEME NO 1",
+"skuid":"",
+"regioncode":"W001",
+"empcode":"",
+"minsales":75000,
+"percentile":11,
+"from_date":"2024-06-21",
+"to_date":"2024-06-30"
+}
